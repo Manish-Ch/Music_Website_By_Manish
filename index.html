@@ -1,0 +1,630 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Music app - By Manish</title>
+    <!-- From bootstrap for the icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="./favicon.png" type="image/x-icon">
+</head>
+<body>
+    <header>
+        <!-- The line is used for the changing songs list to favourites and more... -->
+        <div class="changing"></div>
+        <!-- Songs menu secction. Songs list will be under this Secction (Basically left side for the desktop)-->
+        <div class="menu-side" id="menu-side">
+            <h1 id="top_name"> Playlist</h1>
+            <div class="playlist">
+                <h4 class="active" id="active1" onclick="playlist()"><span></span><i class="bi bi-music-note-beamed"></i> Playlist</h4>
+                <h4 id="active2" onclick="favourite()"><span></span><i class="bi bi-music-note-beamed"></i> Favourite</h4>
+                <h4 id="active3" onclick="newsongs()"><span></span><i class="bi bi-music-note-beamed"></i> New Songs</h4>
+            </div>
+            <!-- These threes section used for the songs -->
+            <!-- 1) Start Playlist section -->
+            <div class="menu_song" id="playlist">
+                <li class="song-item" id="01" onclick="manirey(1)">
+                    <span>01</span>
+                    <img src="./img/1.jpg" alt="Alan">
+                    <h5>On my way
+                    <div class="subtitle">Alan Walker</div>
+                    </h5>
+                    <i class="bi playListPlay bi-play-circle-fill" id="1"></i>
+                </li>
+                <li class="song-item" id="02" onclick="manirey(2)">
+                    <span>02</span>
+                    <img src="./img/1.jpg" alt="Alan">
+                    <h5>On my way
+                    <div class="subtitle">Alan Walker</div>
+                    </h5>
+                    <i class="bi playListPlay bi-play-circle-fill" id="2"></i>
+                </li>
+                <li class="song-item" id="03" onclick="manirey(3)">
+                    <span>03</span>
+                    <img src="./img/1.jpg" alt="Alan">
+                    <h5>On my way
+                    <div class="subtitle">Alan Walker</div>
+                    </h5>
+                    <i class="bi playListPlay bi-play-circle-fill" id="3"></i>
+                </li>
+                <li class="song-item" id="04" onclick="manirey(4)">
+                    <span>04</span>
+                    <img src="./img/1.jpg" alt="Alan">
+                    <h5>On my way
+                    <div class="subtitle">Alan Walker</div>
+                    </h5>
+                    <i class="bi playListPlay bi-play-circle-fill" id="4"></i>
+                </li>
+                <li class="song-item" id="05" onclick="manirey(5)">
+                    <span>05</span>
+                    <img src="./img/1.jpg" alt="Alan">
+                    <h5>On my way
+                    <div class="subtitle">Alan Walker</div>
+                    </h5>
+                    <i class="bi playListPlay bi-play-circle-fill" id="5"></i>
+                </li>
+                <li class="song-item" id="06" onclick="manirey(6)">
+                    <span>06</span>
+                    <img src="./img/1.jpg" alt="Alan">
+                    <h5>On my way
+                    <div class="subtitle">Alan Walker</div>
+                    </h5>
+                    <i class="bi playListPlay bi-play-circle-fill" id="6"></i>
+                </li>
+                <li class="song-item" id="07" onclick="manirey(7)">
+                    <span>07</span>
+                    <img src="./img/1.jpg" alt="Alan">
+                    <h5>On my way
+                    <div class="subtitle">Alan Walker</div>
+                </h5>
+                <i class="bi playListPlay bi-play-circle-fill" id="7"></i>
+                </li>
+            </div>
+            <!-- 1) End of Playlist songs -->
+
+            <!-- 2) Start of Favourite songs -->
+            <div class="menu_song" id="favourite">
+                <li class="song-item" id="08" onclick="manirey(8)">
+                    <span>01</span>
+                    <img src="./img/1.jpg" alt="Alan">
+                    <h5>On my way
+                    <div class="subtitle">Alan Walker</div>
+                    </h5>
+                    <i class="bi playListPlay bi-play-circle-fill" id="8"></i>
+                </li>
+                <li class="song-item" id="09" onclick="manirey(9)">
+                    <span>02</span>
+                    <img src="./img/1.jpg" alt="Alan">
+                    <h5>On my way
+                    <div class="subtitle">Alan Walker</div>
+                    </h5>
+                    <i class="bi playListPlay bi-play-circle-fill" id="9"></i>
+                </li>
+                <li class="song-item" id="010" onclick="manirey(10)">
+                    <span>03</span>
+                    <img src="./img/1.jpg" alt="Alan">
+                    <h5>On my way
+                    <div class="subtitle">Alan Walker</div>
+                    </h5>
+                    <i class="bi playListPlay bi-play-circle-fill" id="10"></i>
+                </li>
+                <li class="song-item" id="011" onclick="manirey(11)">
+                    <span>04</span>
+                    <img src="./img/1.jpg" alt="Alan">
+                    <h5>On my way
+                    <div class="subtitle">Alan Walker</div>
+                    </h5>
+                    <i class="bi playListPlay bi-play-circle-fill" id="11"></i>
+                </li>
+                <li class="song-item" id="012" onclick="manirey(12)">
+                    <span>05</span>
+                    <img src="./img/1.jpg" alt="Alan">
+                    <h5>On my way
+                    <div class="subtitle">Alan Walker</div>
+                    </h5>
+                    <i class="bi playListPlay bi-play-circle-fill" id="12"></i>
+                </li>
+                <li class="song-item" id="013" onclick="manirey(13)">
+                    <span>06</span>
+                    <img src="./img/1.jpg" alt="Alan">
+                    <h5>On my way
+                    <div class="subtitle">Alan Walker</div>
+                    </h5>
+                    <i class="bi playListPlay bi-play-circle-fill" id="13"></i>
+                </li>
+                <li class="song-item" id="014" onclick="manirey(14)">
+                    <span>07</span>
+                    <img src="./img/1.jpg" alt="Alan">
+                    <h5>On my way
+                    <div class="subtitle">Alan Walker</div>
+                    </h5>
+                    <i class="bi playListPlay bi-play-circle-fill" id="14"></i>
+                </li>
+            </div>
+            <!-- 2) End of Favourite songs -->
+
+            <!-- 3) Start of NewSongs  -->
+            <div class="menu_song" id="NewSongs">
+                <li class="song-item" id="015" onclick="manirey(15)">
+                    <span>01</span>
+                    <img src="./img/1.jpg" alt="Alan">
+                    <h5>show on screeem
+                    <div class="subtitle">Manish</div>
+                    </h5>
+                    <i class="bi playListPlay bi-play-circle-fill" id="15"></i>
+                </li>
+                <li class="song-item" id="016" onclick="manirey(16)">
+                    <span>02</span>
+                    <img src="./img/1.jpg" alt="Alan">
+                    <h5>On my way
+                    <div class="subtitle">Alan Walker</div>
+                    </h5>
+                    <i class="bi playListPlay bi-play-circle-fill" id="16"></i>
+                </li>
+                <li class="song-item" id="017" onclick="manirey(17)">
+                    <span>03</span>
+                    <img src="./img/1.jpg" alt="Alan">
+                    <h5>On my way
+                    <div class="subtitle">Alan Walker</div>
+                    </h5>
+                    <i class="bi playListPlay bi-play-circle-fill" id="17"></i>
+                </li>
+                <li class="song-item" id="018" onclick="manirey(18)">
+                    <span>04</span>
+                    <img src="./img/1.jpg" alt="Alan">
+                    <h5>On my way
+                    <div class="subtitle">Alan Walker</div>
+                    </h5>
+                    <i class="bi playListPlay bi-play-circle-fill" id="18"></i>
+                </li>
+                <li class="song-item" id="019" onclick="manirey(19)">
+                    <span>05</span>
+                    <img src="./img/1.jpg" alt="Alan">
+                    <h5>On my way
+                    <div class="subtitle">Alan Walker</div>
+                    </h5>
+                    <i class="bi playListPlay bi-play-circle-fill" id="21"></i>
+                </li>
+                <li class="song-item" id="020" onclick="manirey(20)">
+                    <span>06</span>
+                    <img src="./img/1.jpg" alt="Alan">
+                    <h5>On my way
+                    <div class="subtitle">Alan Walker</div>
+                    </h5>
+                    <i class="bi playListPlay bi-play-circle-fill" id="20"></i>
+                </li>
+                <li class="song-item" id="021" onclick="manirey(21)">
+                    <span>07</span>
+                    <img src="./img/1.jpg" alt="Alan">
+                    <h5>Ofnsjk
+                    <div class="subtitle">Alan Walker</div>
+                    </h5>
+                    <i class="bi playListPlay bi-play-circle-fill" id="21"></i>
+                </li>
+            </div>
+            <!-- 3) End of NewSongs  -->
+        </div>
+        <!-- End Song section -->
+        <div id="lib">
+            <div class="textr">Still working on this project. <br><br>Click on image for the mobile version</div>
+            <a href="https://manish-ch.github.io/Music_mobile88_version/" target="_blank" class="clickers"><img src="./img/Manish.jpg" alt="Manish" ></a>
+        </div>
+        <div id="rad">
+            <div class="textr">Still working on this project. <br> But only for <strong>Mobile</strong> Version<br><br>Click on image for mobile the version</div>
+            <a href="https://manish-ch.github.io/Music_mobile88_version/" target="_blank" class="clickers"><img src="./img/Manish.jpg" alt="Manish" ></a>
+        </div>
+        <div class="nav_bar" id="nav_bar">
+            <nav id="nav0">
+                <div id="marker"></div>
+                <div id="markerNone"></div>
+                <li onclick="Discover()" >Discover</li>
+                <li onclick="Library()">Library</li>
+                <li onclick="Radio()">Radio</li>
+            </nav>
+            <nav id="search_nav">
+                <div class="search">
+                    <i class="bi bi-search"></i>
+                    <input type="text" placeholder="Search Music...">
+                </div>
+                <div class="user">
+                    <a href="https://manish-ch.github.io/Music_mobile88_version/" target="_blank"><img src="./img/Manish.jpg" alt="user" title="Manish"></a>
+                </div>
+            </nav>
+        </div>
+        <!-- End of Nav bar -->
+        <!-- Start of main section -->
+        <div class="song-side" id="song-side">
+            <div class="content">
+                <h1>Alan Walker - On My Way</h1>
+                <p>I'm sorry but Don't wanna talk,I need a moment 'fore I go It's nothing personal I draw the blinds They don't need to see me cry 'Cause even if they understand They don't understand</p>
+                <div class="buttons">
+                    <button onclick="pasching()">PLAY</button>
+                    <button>FOLLOW</button>
+                </div>
+            </div>
+            <!-- end of content -->
+
+            <!-- The some of popular songs -->
+            <div class="popular-songs">
+                <div class="h4">
+                    <h4>Popular Songs</h4>
+                    <div class="btns">
+                        <i class="bi bi-arrow-left-short" id="arrow-left-short"></i>
+                        <i class="bi bi-arrow-right-short" id="arrow-right-short"></i>
+                    </div>
+                </div>
+
+                <!-- This is same as the song list but for the popular songs -->
+                <div class="pop-song" id="scroll_thing">
+                    <li class="song-item" id="022" onclick="manirey(22)">
+                        <div class="play-icon">
+                            <img src="./img/1.jpg" alt="Alan">
+                            <i class="bi playListPlay bi-play-circle-fill" id="22"></i>
+                        </div>
+                        <h5>On my way
+                            <br>
+                            <div class="subtitle">Alan Walker</div>
+                        </h5>
+                    </li>
+                    <li class="song-item" id="023" onclick="manirey(23)">
+                        <div class="play-icon">
+                            <img src="./img/1.jpg" alt="Alan">
+                            <i class="bi playListPlay bi-play-circle-fill" id="23"></i>
+                        </div>
+                        <h5>On my way
+                            <br>
+                            <div class="subtitle">Alan Walker</div>
+                        </h5>
+                    </li>
+                    <li class="song-item" id="024" onclick="manirey(24)">
+                        <div class="play-icon">
+                            <img src="./img/1.jpg" alt="Alan">
+                            <i class="bi playListPlay bi-play-circle-fill" id="24"></i>
+                        </div>
+                        <h5>On my way
+                            <br>
+                            <div class="subtitle">Alan Walker</div>
+                        </h5>
+                    </li>
+                    <li class="song-item" id="025" onclick="manirey(25)">
+                        <div class="play-icon">
+                            <img src="./img/1.jpg" alt="Alan">
+                            <i class="bi playListPlay bi-play-circle-fill" id="25"></i>
+                        </div>
+                        <h5>On my way
+                            <br>
+                            <div class="subtitle">Alan Walker</div>
+                        </h5>
+                    </li>
+                    <li class="song-item" id="026" onclick="manirey(26)">
+                        <div class="play-icon">
+                            <img src="./img/1.jpg" alt="Alan">
+                            <i class="bi playListPlay bi-play-circle-fill" id="26"></i>
+                        </div>
+                        <h5>On my way
+                            <br>
+                            <div class="subtitle">Alan Walker</div>
+                        </h5>
+                    </li>
+                    <li class="song-item" id="027" onclick="manirey(27)">
+                        <div class="play-icon">
+                            <img src="./img/1.jpg" alt="Alan">
+                            <i class="bi playListPlay bi-play-circle-fill" id="27"></i>
+                        </div>
+                        <h5>On my way
+                            <br>
+                            <div class="subtitle">Alan Walker</div>
+                        </h5>
+                    </li>
+                    <li class="song-item" id="028" onclick="manirey(28)">
+                        <div class="play-icon">
+                            <img src="./img/1.jpg" alt="Alan">
+                            <i class="bi playListPlay bi-play-circle-fill" id="28"></i>
+                        </div>
+                        <h5>On my way
+                            <br>
+                            <div class="subtitle">Alan Walker</div>
+                        </h5>
+                    </li>
+                    <li class="song-item" id="029" onclick="manirey(29)">
+                        <div class="play-icon">
+                            <img src="./img/1.jpg" alt="Alan">
+                            <i class="bi playListPlay bi-play-circle-fill" id="29"></i>
+                        </div>
+                        <h5>On my way
+                            <br>
+                            <div class="subtitle">Alan Walker</div>
+                        </h5>
+                    </li>
+                    <li class="song-item" id="030" onclick="manirey(30)">
+                        <div class="play-icon">
+                            <img src="./img/1.jpg" alt="Alan">
+                            <i class="bi playListPlay bi-play-circle-fill" id="30"></i>
+                        </div>
+                        <h5>On my way
+                            <br>
+                            <div class="subtitle">Alan Walker</div>
+                        </h5>
+                    </li>
+                    <li class="song-item" id="031" onclick="manirey(31)">
+                        <div class="play-icon">
+                            <img src="./img/1.jpg" alt="Alan">
+                            <i class="bi playListPlay bi-play-circle-fill" id="31"></i>
+                        </div>
+                        <h5>On my way
+                            <br>
+                            <div class="subtitle">Alan Walker</div>
+                        </h5>
+                    </li>
+                    <li class="song-item" id="032" onclick="manirey(32)">
+                        <div class="play-icon">
+                            <img src="./img/1.jpg" alt="Alan">
+                            <i class="bi playListPlay bi-play-circle-fill" id="32"></i>
+                        </div>
+                        <h5>On my way
+                            <br>
+                            <div class="subtitle">Alan Walker</div>
+                        </h5>
+                    </li>
+                </div>
+                <!-- End of song list -->
+            </div>
+            <!-- End of popular songs -->
+
+            <!-- Popular artists -->
+            <div class="popular-artist">
+                <div class="h4">
+                    <h4>Popular Artists</h4>
+                    <div class="btns">
+                        <i class="bi bi-arrow-left-short" id="arrow-left-short-down"></i>
+                        <i class="bi bi-arrow-right-short" id="arrow-right-short-down"></i>
+                    </div>
+                </div>
+                <div class="item" id="scroll_thing_down">
+                    <li>
+                        <div class="p-icon">
+                            <img src="./img/alan.jpg" alt="alan" title="alan">
+                        </div>
+                    </li>
+                    <li>
+                        <div class="p-icon">
+                            <img src="https://raaga.gumlet.io/raagaimg/r_img/catalog/s/%7B43eedcec-7998-45ba-899e-4d2ea643a558%7D.jpg?w=128&dpr=1.0" alt="DSP" title="DSP">
+                        </div>
+                    </li>
+                    <li>
+                        <div class="p-icon">
+                            <img src="https://raaga.gumlet.io/raagaimg/r_img/catalog/s/%7B38dad986-316a-4a1c-a9d8-096fd3991bca%7D.jpg?dpr=1.0&q=70&w=128" alt="SP Balu" title="SP Balu">
+                        </div>
+                    </li>
+                    <li>
+                        <div class="p-icon">
+                            <img src="https://raaga.gumlet.io/raagaimg/r_img/catalog/md/%7Bf070c553-de11-47b9-9d89-5c9a2569809c%7D.jpg?dpr=1.0&q=70&w=128" alt="Thaman S" title="Thaman S">
+                        </div>
+                    </li>
+                    <li>
+                        <div class="p-icon">
+                            <img src="https://raaga.gumlet.io/raagaimg/r_img/catalog/md/%7B6451fb21-6d03-479d-a912-bb612928141b%7D.jpg?dpr=1.0&q=70&w=128" alt="illayaraja" title="illayaraja">
+                        </div>
+                    </li>
+                    <li>
+                        <div class="p-icon">
+                            <img src="https://raaga.gumlet.io/raagaimg/r_img/catalog/md/%7B4ae62eb7-de61-4742-990e-b5e85751f8a0%7D.jpg?dpr=1.0&q=70&w=128" alt="AR Rahman" title="AR Rahman">
+                        </div>
+                    </li>
+                    <li>
+                        <div class="p-icon">
+                            <img src="https://raaga.gumlet.io/raagaimg/r_img/catalog/md/%7Bdc30b7a0-181d-4c44-a069-b3c20d8edb8b%7D.jpg?dpr=1.0&q=70&w=128" alt="MM Keeravani" title="MM Keeravani">
+                        </div>
+                    </li>
+                    <li>
+                        <div class="p-icon">
+                            <img src="https://raaga.gumlet.io/raagaimg/r_img/catalog/md/%7B4d80c429-4be1-45c0-81a9-6349508dde68%7D.jpg?dpr=1.0&q=70&w=128" alt="Mani Sharma" title="Mani Sharma">
+                        </div>
+                    </li>
+                    <li>
+                        <div class="p-icon">
+                            <img src="https://raaga.gumlet.io/raagaimg/r_img/catalog/md/%7B8e42e4d4-bbc4-471d-ae1a-5b67021780d8%7D.jpg?dpr=1.0&q=70&w=128" alt="Anup Rubens" title="Anup Rubens">
+                        </div>
+                    </li>
+                    <li>
+                        <div class="p-icon">
+                            <img src="https://raaga.gumlet.io/raagaimg/r_img/catalog/md/%7B710f9d16-c124-426c-8899-d876e80a0add%7D.jpg?dpr=1.0&q=70&w=128" alt="koti" title="koti">
+                        </div>
+                    </li>
+                    <li>
+                        <div class="p-icon">
+                            <img src="https://raaga.gumlet.io/raagaimg/r_img/catalog/s/%7B65380522-6513-49df-8c98-660b79b7b189%7D.jpg?dpr=1.0&q=70&w=128" alt="chitra" title="chitra">
+                        </div>
+                    </li>
+                    <li>
+                        <div class="p-icon">
+                            <img src="https://raaga.gumlet.io/raagaimg/r_img/catalog/s/%7B23a73854-03bc-4055-bd9c-4b46b88f1e48%7D.jpg?dpr=1.0&q=70&w=128" alt="Shreya Ghoshal" title="Shreya Ghoshal">
+                        </div>
+                    </li>
+                    <li>
+                        <div class="p-icon">
+                            <img src="https://raaga.gumlet.io/raagaimg/r_img/catalog/s/%7B10b6c17e-5e76-4112-862e-fb56d539eb0d%7D.jpg?dpr=1.0&q=70&w=128" alt="Mano" title="Mano">
+                        </div>
+                    </li>
+                    <li>
+                        <div class="p-icon">
+                            <img src="https://raaga.gumlet.io/raagaimg/r_img/catalog/s/%7Bdc653b02-c306-48e4-8a39-c033064969ce%7D.jpg?dpr=1.0&q=70&w=128" alt="Yesudas" title="Yesudas">
+                        </div>
+                    </li>
+                    <li>
+                        <div class="p-icon">
+                            <img src="https://raaga.gumlet.io/raagaimg/r_img/catalog/s/%7B660a47d5-6231-4fa1-b1ef-face931d199e%7D.jpg?dpr=1.0&q=70&w=128" alt="Geetha Maduri" title="Geetha Maduri">
+                        </div>
+                    </li>
+                    <li>
+                        <div class="p-icon">
+                            <img src="https://raaga.gumlet.io/raagaimg/r_img/catalog/s/%7B4796f63b-2ab4-4774-ac3a-43de6255cadf%7D.jpg?dpr=1.0&q=70&w=128" alt="Ghantasala" title="Ghantasala">
+                        </div>
+                    </li>
+                    <li>
+                        <div class="p-icon">
+                            <img src="./img/1.jpg" alt="mani" title="mani">
+                        </div>
+                    </li>
+                </div>
+            </div>
+            <!-- End of popular artists -->
+            <div class="popular-artist" id="for_in">
+                <div class="h4">
+                    <h4>Popular Actors</h4>
+                    <div class="btns">
+                        <i class="bi bi-arrow-left-short" id="arrow-left-short-down"></i>
+                        <i class="bi bi-arrow-right-short" id="arrow-right-short-down"></i>
+                    </div>
+                </div>
+                <div class="item" id="scroll_thing_down">
+                    <li>
+                        <div class="p-icon">
+                            <img src="https://raaga.gumlet.io/raagaimg/r_img/catalog/a/%7B4ff0d3d8-d31c-437c-870b-538c16e228fb%7D.jpg?w=128&dpr=1.0" alt="RamCharan" title="RamCharan">
+                        </div>
+                    </li>
+                    <li>
+                        <div class="p-icon">
+                            <img src="https://raaga.gumlet.io/raagaimg/r_img/catalog/a/%7B68f241c5-10c1-4ae7-ae30-ffc1320cb2ef%7D.jpg?w=128&dpr=1.0" alt="Pawan Kalyan" title="Pawan Kalyan">
+                        </div>
+                    </li>
+                    <li>
+                        <div class="p-icon">
+                            <img src="https://raaga.gumlet.io/raagaimg/r_img/catalog/a/%7B955414c1-f67b-41c0-b5ac-dd4fbb0c1152%7D.jpg?w=128&dpr=1.0" alt="Prabhas" title="Prabhas">
+                        </div>
+                    </li>
+                    <li>
+                        <div class="p-icon">
+                            <img src="https://raaga.gumlet.io/raagaimg/r_img/catalog/a/%7B720d0b39-ba0c-4302-92aa-e34639fbbc26%7D.jpg?w=128&dpr=1.0" alt="Mahesh Babu" title="Mahesh Babu">
+                        </div>
+                    </li>
+                    <li>
+                        <div class="p-icon">
+                            <img src="https://raaga.gumlet.io/raagaimg/r_img/catalog/a/%7B28610cea-9c4e-492a-b26f-af13e075c7c5%7D.jpg?w=128&dpr=1.0" alt="Jr NTR" title="Jr NTR">
+                        </div>
+                    </li>
+                    <li>
+                        <div class="p-icon">
+                            <img src="https://raaga.gumlet.io/raagaimg/r_img/catalog/a/%7B8905bc11-e2ef-4961-a178-04ee2766b082%7D.jpg?w=128&dpr=1.0" alt="Allu Arjun" title="Allu Arjun">
+                        </div>
+                    </li>
+                    <li>
+                        <div class="p-icon">
+                            <img src="https://raaga.gumlet.io/raagaimg/r_img/catalog/a/%7B15b17c69-85fc-4ed3-936c-83ba79b6f2ae%7D.jpg?w=128&dpr=1.0" alt="Chiranjeevi" title="Chiranjeevi">
+                        </div>
+                    </li>
+                    <li>
+                        <div class="p-icon">
+                            <img src="https://raaga.gumlet.io/raagaimg/r_img/catalog/a/%7B45288183-c45c-4104-8758-75697696bc50%7D.jpg?w=128&dpr=1.0" alt="Nagarjuna" title="Nagarjuna">
+                        </div>
+                    </li>
+                    <li>
+                        <div class="p-icon">
+                            <img src="https://raaga.gumlet.io/raagaimg/r_img/catalog/a/%7Beb6cf33d-827f-47ac-b7dc-1a8f101a51f2%7D.jpg?w=128&dpr=1.0" alt="Venkatesh" title="Venkatesh">
+                        </div>
+                    </li>
+                    <li>
+                        <div class="p-icon">
+                            <img src="https://raaga.gumlet.io/raagaimg/r_img/catalog/a/%7B04e78500-dbf5-42d3-9ff9-30843c32716e%7D.jpg?w=128&dpr=1.0" alt="BalaKrishna" title="BalaKrishna">
+                        </div>
+                    </li>
+                    <li>
+                        <div class="p-icon">
+                            <img src="https://raaga.gumlet.io/raagaimg/r_img/catalog/a/%7B3d7f6362-4691-4d45-8205-ced2e388a438%7D.jpg?w=128&dpr=1.0" alt="Ravi Teja" title="Ravi Teja">
+                        </div>
+                    </li>
+                    <li>
+                        <div class="p-icon">
+                            <img src="https://raaga.gumlet.io/raagaimg/r_img/catalog/a/%7B645c0859-b196-40fe-b520-d0ed36c7f26c%7D.jpg?w=128&dpr=1.0" alt="Nani" title="Nani">
+                        </div>
+                    </li>
+                    <li>
+                        <div class="p-icon">
+                            <img src="./img/1.jpg" alt="mani" title="mani">
+                        </div>
+                    </li>
+                </div>
+            </div>
+            <div class="popular-artist" id="for_in">
+                <div class="h4">
+                    <h4>Popular Actresses</h4>
+                    <div class="btns">
+                        <i class="bi bi-arrow-left-short" id="arrow-left-short-down"></i>
+                        <i class="bi bi-arrow-right-short" id="arrow-right-short-down"></i>
+                    </div>
+                </div>
+                <div class="item" id="scroll_thing_down">
+                    <li>
+                        <div class="p-icon">
+                            <img src="https://raaga.gumlet.io/raagaimg/r_img/catalog/ac/%7B6935a777-81f3-4c36-9bb9-e08fa62fadc4%7D.jpg?w=128&dpr=1.0" alt="Soundarya" title="Soundarya">
+                        </div>
+                    </li>
+                    <li>
+                        <div class="p-icon">
+                            <img src="https://raaga.gumlet.io/raagaimg/r_img/catalog/ac/%7B72302642-8187-4ebc-abe8-ae885a729b1c%7D.jpg?w=128&dpr=1.0" alt="Anushka" title="Anushka">
+                        </div>
+                    </li>
+                    <li>
+                        <div class="p-icon">
+                            <img src="https://raaga.gumlet.io/raagaimg/r_img/catalog/ac/%7Bc49f7a67-6085-439b-9335-ff82243e85ff%7D.jpg?w=128&dpr=1.0" alt="Kajal Agarwal" title="Agarwal">
+                        </div>
+                    </li>
+                    <li>
+                        <div class="p-icon">
+                            <img src="./img/1.jpg" alt="akhil" title="akhil">
+                        </div>
+                    </li>
+                </div>
+            </div>
+        </div>
+        <!-- End of main Section -->
+
+        <!-- Start of bottom song menu -->
+        <div class="master-play" id="master-play" onclick="ain_player()">
+            <!-- waves to know the song is playing -->
+            <div class="wave" id="e1234">
+                <div class="wave1"></div>
+                <div class="wave1"></div>
+                <div class="wave1"></div>
+            </div>
+            <!-- End of wave section -->
+            <!-- (Main song) The song that changes when play any song -->
+            <div id="c4ms4">
+                <img src="./img/1.jpg" alt="Alan" id="c4ms1">
+                <h5 id="c4ms2">On my way
+                <div class="subtitle" id="c4ms3">Alan Walker</div>
+                </h5>
+            </div>
+            <!-- End of main song -->
+            <!-- play icons -->
+            <div class="icon" onclick="reverseDiscover()">
+                <i class="bi bi-skip-start-fill" id="main_previous"></i>
+                <i class="bi bi-play-fill" id="main_play22"></i>
+                <i class="bi bi-skip-end-fill" id="main_next"></i>
+            </div>
+            <!-- End of play icons -->
+            <!-- Seek bar of song -->
+            <span id="currentStart">0:00</span>
+            <div class="bar">
+                <input type="range" id="seek" min="0" value="0" max="100" onclick="reverseDiscover()">
+                <div class="bar2" id="bar2"></div>
+                <div class="dot" id="dot0"></div>
+            </div>
+            <span id="currentEnd">0:00</span>
+            <!-- End of seek bar -->
+            <!-- volume sectoin -->
+            <div class="vol">
+                <i class="bi bi-volume-down-fill" id="vol_icon"></i>
+                <input type="range" id="vol" min="0" value="30" max="100" onclick="reverseDiscover()">
+                <div class="vol_bar"></div>
+                <div class="dot" id="vol_dot"></div>
+            </div>
+            <!-- End of volume section -->
+        </div>
+        <!-- End of bottom song menu -->
+    </header>
+    <script src="./script.js"></script>
+</body>
+</html>
